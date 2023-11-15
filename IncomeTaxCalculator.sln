@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncomeTaxCalculator", "IncomeTaxCalculator\IncomeTaxCalculator.csproj", "{44B7EE5C-B207-43CC-8E09-01C1EFF86B93}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Website", "Website", "{B02C4697-B15B-4B48-9BB0-14BCFAF74659}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{3FA650C4-4923-4D3F-97B2-F5434CA4FC1F}"
@@ -19,8 +17,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Messaging", "Messaging", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Email", "Email", "{CA1EA06F-AA8F-4F8E-B529-8786DC7DF453}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncomeTaxCalculatorApi", "IncomeTaxCalculatorApi\IncomeTaxCalculatorApi.csproj", "{1DAFD505-2487-4DE1-B0B7-2E0AC5B70509}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{B9528542-DD1D-4211-A4D8-72E7D4FE32B9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{21374C36-CFA7-4BF8-9193-5F90DFB541E1}"
@@ -29,29 +25,40 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers", "Helpers", "{B508
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Settings", "Settings", "{3A10412E-257B-4C9E-A4BD-DFB23B81B3B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncomeTaxCalculator.Model", "IncomeTaxCalculator.Model\IncomeTaxCalculator.Model.csproj", "{1A854450-74EB-470C-B64B-9720FE81A4B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncomeTaxCalculator.Website", "IncomeTaxCalculator.Website\IncomeTaxCalculator.Website.csproj", "{17FDDC97-2394-4C3E-A64B-FF03B6F06CEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncomeTaxCalculator.Api", "IncomeTaxCalculator.Api\IncomeTaxCalculator.Api.csproj", "{256D458D-396F-4205-921F-9A709340A343}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{44B7EE5C-B207-43CC-8E09-01C1EFF86B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{44B7EE5C-B207-43CC-8E09-01C1EFF86B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{44B7EE5C-B207-43CC-8E09-01C1EFF86B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{44B7EE5C-B207-43CC-8E09-01C1EFF86B93}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1DAFD505-2487-4DE1-B0B7-2E0AC5B70509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1DAFD505-2487-4DE1-B0B7-2E0AC5B70509}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1DAFD505-2487-4DE1-B0B7-2E0AC5B70509}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1DAFD505-2487-4DE1-B0B7-2E0AC5B70509}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A854450-74EB-470C-B64B-9720FE81A4B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A854450-74EB-470C-B64B-9720FE81A4B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A854450-74EB-470C-B64B-9720FE81A4B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A854450-74EB-470C-B64B-9720FE81A4B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17FDDC97-2394-4C3E-A64B-FF03B6F06CEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17FDDC97-2394-4C3E-A64B-FF03B6F06CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17FDDC97-2394-4C3E-A64B-FF03B6F06CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17FDDC97-2394-4C3E-A64B-FF03B6F06CEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{256D458D-396F-4205-921F-9A709340A343}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{256D458D-396F-4205-921F-9A709340A343}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{256D458D-396F-4205-921F-9A709340A343}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{256D458D-396F-4205-921F-9A709340A343}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{44B7EE5C-B207-43CC-8E09-01C1EFF86B93} = {B02C4697-B15B-4B48-9BB0-14BCFAF74659}
-		{1DAFD505-2487-4DE1-B0B7-2E0AC5B70509} = {3FA650C4-4923-4D3F-97B2-F5434CA4FC1F}
 		{21374C36-CFA7-4BF8-9193-5F90DFB541E1} = {B9528542-DD1D-4211-A4D8-72E7D4FE32B9}
 		{B508D8BE-D011-4991-A32A-DE42BE151AA1} = {B9528542-DD1D-4211-A4D8-72E7D4FE32B9}
+		{1A854450-74EB-470C-B64B-9720FE81A4B5} = {21374C36-CFA7-4BF8-9193-5F90DFB541E1}
+		{17FDDC97-2394-4C3E-A64B-FF03B6F06CEF} = {B02C4697-B15B-4B48-9BB0-14BCFAF74659}
+		{256D458D-396F-4205-921F-9A709340A343} = {3FA650C4-4923-4D3F-97B2-F5434CA4FC1F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {07569DDE-C975-4FB0-8554-D6D28C325AB0}

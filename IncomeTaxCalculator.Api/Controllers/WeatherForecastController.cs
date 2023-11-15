@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace IncomeTaxCalculatorApi.Controllers
+namespace IncomeTaxCalculator.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]

@@ -1,4 +1,4 @@
-namespace IncomeTaxCalculatorApi
+namespace IncomeTaxCalculator.Api
 {
     public class WeatherForecast
     {
