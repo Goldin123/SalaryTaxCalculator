@@ -2,6 +2,9 @@
 {
     public class TaxSalaryRequest
     {
+        /// <summary>
+        /// Total gross amount before any deductions
+        /// </summary>
         public decimal GrossAmount { get; set; }
         public int TaxYear { get; set; }
         public DateTime DateOfBirth { get; set; }

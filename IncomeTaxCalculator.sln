@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IncomeTaxCalculator.Site", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{5CFBECF4-13FF-405D-B45A-DD3EE804293A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncomeTaxCalculator.InMemory.Database", "IncomeTaxCalculator.InMemory.Database\IncomeTaxCalculator.InMemory.Database.csproj", "{1D745C31-EB9D-49FE-A06E-6FFC209783D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{8A7DE68A-B18A-4B4F-AA9C-BD917A91C664}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A7DE68A-B18A-4B4F-AA9C-BD917A91C664}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A7DE68A-B18A-4B4F-AA9C-BD917A91C664}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D745C31-EB9D-49FE-A06E-6FFC209783D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D745C31-EB9D-49FE-A06E-6FFC209783D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D745C31-EB9D-49FE-A06E-6FFC209783D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D745C31-EB9D-49FE-A06E-6FFC209783D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +67,7 @@ Global
 		{1A854450-74EB-470C-B64B-9720FE81A4B5} = {21374C36-CFA7-4BF8-9193-5F90DFB541E1}
 		{256D458D-396F-4205-921F-9A709340A343} = {3FA650C4-4923-4D3F-97B2-F5434CA4FC1F}
 		{8A7DE68A-B18A-4B4F-AA9C-BD917A91C664} = {B02C4697-B15B-4B48-9BB0-14BCFAF74659}
+		{1D745C31-EB9D-49FE-A06E-6FFC209783D9} = {F0F8302B-829D-4670-AFA9-6DAB5D211A62}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {07569DDE-C975-4FB0-8554-D6D28C325AB0}
