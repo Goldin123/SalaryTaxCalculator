@@ -2,8 +2,8 @@
 {
     public class TaxSalaryRequest
     {
-        public decimal GrossAmount { get; set; }      
-        public int TaxYear { get; set; }      
+        public decimal GrossAmount { get; set; }
+        public int TaxYear { get; set; }
         public DateTime DateOfBirth { get; set; }
         public PayFrequency IncomeFrequency { get; set; }
         public decimal? AnnualBonus { get; set; }
@@ -14,6 +14,18 @@
         public MedicalAid? MedicalAidPay { get; set; }
         public TaxSalaryRequest(decimal grossAmount, int taxYear, DateTime dateOfBirth, PayFrequency incomeFrequency, decimal? annualBonus, Allowance? allowance, PayContribution? providentFund, PayContribution? pensionFund, PayContribution? retirementAnnuity, MedicalAid? medicalAidPay)
         {
+            if (grossAmount < 0)
+                throw new ArgumentOutOfRangeException("Gross amount must be grater than 0");
+
+            if (taxYear < 0 || taxYear > DateTime.Now.Year)
+                throw new ArgumentOutOfRangeException("Tax year must be grater than 0 and not more than current year");
+
+            if (DateOfBirth > DateTime.Now || (DateTime.Now.Year - DateOfBirth.Year) < 18)
+                throw new ArgumentOutOfRangeException("You must 18 years or older to pay income tax and date of birth must be less than current");
+
+            if (annualBonus < 0)
+                throw new ArgumentOutOfRangeException("Bonus amount must be grater than 0");
+
             GrossAmount = grossAmount;
             TaxYear = taxYear;
             DateOfBirth = dateOfBirth;
@@ -63,15 +75,15 @@
         public Allowance(decimal? travel, decimal? home, decimal? phone, decimal? food)
         {
             if(travel < 0)
-                throw new ArgumentOutOfRangeException("travel amount must be grater than 0");
+                throw new ArgumentOutOfRangeException("Travel amount must be grater than 0");
             if(home < 0)
-                throw new ArgumentOutOfRangeException("home amount must be grater than 0");
+                throw new ArgumentOutOfRangeException("Home amount must be grater than 0");
 
             if(food < 0)
-                throw new ArgumentOutOfRangeException("food amount must be grater than 0");
+                throw new ArgumentOutOfRangeException("Food amount must be grater than 0");
 
             if(phone < 0)
-                throw new ArgumentOutOfRangeException("phone amount must be grater than 0");
+                throw new ArgumentOutOfRangeException("Phone amount must be grater than 0");
 
             Travel = travel;
             Home = home;
@@ -82,9 +94,12 @@
 
     public class MedicalAid : PayContribution
     {
-        public int Dependency { get; set; }
-        public MedicalAid(decimal? ownAmount, decimal? companyAmount, int dependency) : base(ownAmount, companyAmount)
+        public int? Dependency { get; set; }
+        public MedicalAid(decimal? ownAmount, decimal? companyAmount, int? dependency) : base(ownAmount, companyAmount)
         {
+            if (dependency < 0)
+                throw new ArgumentOutOfRangeException("Dependency must be grater than 0");
+
             Dependency = dependency;
         }
     }
