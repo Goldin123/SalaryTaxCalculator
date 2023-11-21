@@ -27,6 +27,7 @@ namespace IncomeTaxCalculator.InMemory.Database.Repository.Implementation
             try
             {
                 var taxBracketDBValues = SetTableTaxBracket(taxBrackets);
+
                 if (taxBracketDBValues.Count > 0)
                 {
                     using (var db = new IncomeTaxCalculatorContext())
@@ -35,7 +36,7 @@ namespace IncomeTaxCalculator.InMemory.Database.Repository.Implementation
                         db.SaveChanges();
                     }
                 }
-                return taxBrackets;
+                return taxBrackets; //CHECK THIS OUT
             }
             catch (Exception ex)
             {
@@ -83,24 +84,28 @@ namespace IncomeTaxCalculator.InMemory.Database.Repository.Implementation
             }
         }
 
-       List<tbl_TaxBracket> SetTableTaxBracket(List<TaxBracket> taxBrackets)
+        List<tbl_TaxBracket> SetTableTaxBracket(List<TaxBracket> taxBrackets)
         {
-            if (taxBrackets.Count > 0)
+            try
             {
-                var taxBkts = new List<tbl_TaxBracket>();
-                taxBkts = taxBrackets.Select(taxBracket=> new tbl_TaxBracket() 
+                if (taxBrackets.Count > 0)
                 {
-                    DateAdded = DateTime.Now,
-                    DateUpdated = DateTime.Now,
-                    Money = taxBracket.Money,
-                    Year = taxBracket.Year,
-                    TaxPercentage = taxBracket.TaxPercentage,
-                    
-                }).ToList();
-                return taxBkts;
-            }
+                    var taxBkts = new List<tbl_TaxBracket>();
+                    taxBkts = taxBrackets.Select(taxBracket => new tbl_TaxBracket()
+                    {
+                        DateAdded = DateTime.Now,
+                        DateUpdated = DateTime.Now,
+                        Money = taxBracket.Money,
+                        Year = taxBracket.Year,
+                        TaxPercentage = taxBracket.TaxPercentage,
 
-           return new List<tbl_TaxBracket>();
+                    }).ToList();
+                    return taxBkts;
+                }
+
+                return new List<tbl_TaxBracket>();
+            }
+            catch { return new List<tbl_TaxBracket>(); }
         }
     }
 }
