@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -8,6 +8,20 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\AdvanceIncomeTaxCalculator\AllowanceCalculator\" />
+    <Folder Include="Features\AdvanceIncomeTaxCalculator\MedicalAidCalculator\" />
+    <Folder Include="Features\AdvanceIncomeTaxCalculator\RetirementCalculator\" />
+    <Folder Include="Features\TaxBracketManagement\AddTaxBracket\" />
+    <Folder Include="Features\TaxBracketManagement\GetTaxBracket\" />
+    <Folder Include="Features\BasicIncomeTaxCalculator\Implemetantion\" />
+    <Folder Include="Features\BasicIncomeTaxCalculator\Interface\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IncomeTaxCalculator.Model\IncomeTaxCalculator.Model.csproj" />
   </ItemGroup>
 
 </Project>

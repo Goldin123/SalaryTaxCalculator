@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section content {
+    <h2>My Form</h2>
+
+    <button type="button" class="collapsible">Toggle Section</button>
+    <div class="content">
+        <!-- Your form content goes here -->
+        <form>
+            <!-- Form fields and controls -->
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var coll = document.querySelector('.collapsible');
+            coll.addEventListener('click', function () {
+                this.classList.toggle('active');
+                var content = this.nextElementSibling;
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
+        });
+    </script>
+}
