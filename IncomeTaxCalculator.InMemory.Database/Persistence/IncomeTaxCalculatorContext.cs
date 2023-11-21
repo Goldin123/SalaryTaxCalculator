@@ -16,6 +16,6 @@ namespace IncomeTaxCalculator.InMemory.Database.Persistence
         {
             optionsBuilder.UseInMemoryDatabase(databaseName: "IncomeTaxCalculatorDatabase");
         }
-        public DbSet<tbl_TaxBracket> Accounts { get; set; }
+        public DbSet<tbl_TaxBracket> TaxBrackets { get; set; }
     }
 }
